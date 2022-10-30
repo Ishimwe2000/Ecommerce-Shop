@@ -5,29 +5,13 @@
       <a href="#">
         <img
           src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-books-literature-flaticons-lineal-color-flat-icons-19.png"
-          alt="GBooks" class="img-responsive"/>
+          alt="Bookish" class="img-responsive"/>
         
       </a>
     </div>
-    <div class="menu-sidebar-content js-scrollbar1">
-      <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
-          <li>
-            <a href="#"> African Books</a>
-          </li>
-          <li>
-            <a href="#">Asian Books</a>
-          </li>
-          <li>
-            <a href="#">Latin Books</a>
-          </li>
-          <!-- <li>
-            <a href="#">Luggage Tags</a>
-          </li> -->
-        </ul>
-      </nav>
-    </div>
-  </aside>
+    <app-product-category-menu></app-product-category-menu>
+
+    </aside>
   <!-- END MENU SIDEBAR-->
 
   <!-- PAGE CONTAINER-->
@@ -37,12 +21,9 @@
       <div class="section-content section-content-p30">
         <div class="container-fluid">
           <div class="header-wrap">
-            <form class="form-header" onsubmit="return false;" method="GET">
-              <input class="au-input au-input-xl" type="text" name="search" placeholder="Search for data ..." />
-              <button class="au-btn-submit" type="submit">
-                Search
-              </button>
-            </form>
+
+            <app-search></app-search>
+
             <div class="cart-area d-n">
               <a href="shopping-detail.html">
                 <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -56,9 +37,10 @@
     <!-- END HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
-    <app-product-list></app-product-list>
+    <router-outlet></router-outlet>
+    <!-- <app-product-list></app-product-list> -->
   </div>
-</div>
+
 <!-- END PAGE CONTAINER-->
 
 
